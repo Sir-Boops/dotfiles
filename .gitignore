@@ -3,3 +3,6 @@
 # Track these ones
 !i3/
 !i3/config
+
+!polybar/
+!polybar/config
