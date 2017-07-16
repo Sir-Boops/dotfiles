@@ -133,9 +133,3 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-# Info bar settings
-#bar {
-#	position top
-#	status_command MONITOR=LVDS-0 polybar main
-#}
