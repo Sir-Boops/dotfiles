@@ -24,16 +24,16 @@ width = 100%
 height = 27
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 6.0
+radius = 0.0
 fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 0
 line-color = #f00
 
-border-size = 4
+border-size = 0
 border-color = #00000000
 
 padding-left = 0
@@ -43,14 +43,13 @@ module-margin-left = 1
 module-margin-right = 2
 
 ;font-0 = fixed:pixelsize=10;1
-font-0 = DejaVu Sana Mono:size=10
+font-0 = DejaVu Sana Mono:size=10:antialias=true
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = date
-modules-right = cpu
-;modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery temperature powermenu
+modules-right = pavolume
 
 ;tray-position = right
 ;tray-padding = 2
@@ -191,7 +190,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+;format-underline = #f90000
 label = %percentage%%
 
 [module/memory]
@@ -244,17 +243,17 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date =
+date = "%m.%d"
 date-alt = " %Y-%m-%d"
 
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+;format-prefix = 
+;format-prefix-foreground = ${colors.foreground-alt}
+;format-underline = #0a6cf5
 
-label = %date% %time%
+label = %time% %date%
 
 [module/volume]
 type = internal/volume
@@ -357,12 +356,22 @@ menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
+[module/pavolume]
+type = custom/script
+interval = 2
+label = %output%
+exec = ~/.config/polybar/pavolume.sh
+click-right = exec pavucontrol
+click-left = ~/.config/polybar/pavolume.sh --togmute
+scroll-up = ~/.config/polybar/pavolume.sh --up
+scroll-down = ~/.config/polybar/pavolume.sh --down
+
 [settings]
 screenchange-reload = true
 ;compositing-background = xor
 ;compositing-background = screen
 ;compositing-foreground = source
-;compositing-border = over
+compositing-border = over
 
 [global/wm]
 margin-top = 5
