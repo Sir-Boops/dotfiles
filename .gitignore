@@ -1,4 +1,5 @@
 # Ignore all
 *
 # Track these ones
+!i3/
 !i3/config
