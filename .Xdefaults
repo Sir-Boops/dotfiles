@@ -1,14 +1,18 @@
 #=====================
 # urxvt settings
 #=====================
+
+# Load plugins
+URxvt.perl-ext: clipboard-osc,selection-to-clipboard,default,matcher
+
 # Overall settings
-urxvt.scrollBar: false
+URxvt.scrollBar: false
+
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
 
 # Font Settings
 urxvt.font: xft:DejaVu Sans Mono:pixelsize=11
-
-# Plugins
-URxvt.perl-ext-common: selection-to-clipboard
 
 # Color Settings
 urxvt.background: #002b36
