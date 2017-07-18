@@ -1,6 +1,5 @@
 # Set the desktop background
 exec --no-startup-id feh --bg-fill ~/.multimc/instances/Unstable/minecraft/screenshots/2017-02-06_09.23.14.png
-exec --no-startup-id MONITOR=LVDS-0 polybar main
 
 # Set the modifyer key
 set $mod Mod1
@@ -13,14 +12,18 @@ font pango:DejaVu Sans Mono 8
 #font pango:DejaVu Sans Mono 8
 
 # Set window border
+gaps outer 0
+gaps inner 5
+smart_gaps on
 new_window pixel 0
 new_float pixel 0
+hide_edge_borders both
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # App Key Binds
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+f exec ~/.firefox/firefox
 bindsym $mod+Shift+d exec dmenu_run
 
@@ -133,3 +136,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+# Finally start polybar
+exec bash ~/.config/polybar/start.sh
