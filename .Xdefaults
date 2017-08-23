@@ -1,40 +1,42 @@
-#=====================
-# urxvt settings
-#=====================
+!!=====================
+!! urxvt settings
+!!=====================
 
-# Load plugins
+!! Load plugins
 URxvt.perl-ext: clipboard-osc,selection-to-clipboard,default,matcher
 
-# Overall settings
+!! Overall settings
 URxvt.scrollBar: false
 
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 
-# Font Settings
+URxvt.scrollTtyOutput: false
+
+!! Font Settings
 urxvt.font: xft:DejaVu Sans Mono:pixelsize=11
 
-# Color Settings
-urxvt.background: #002b36
+!! Color Settings
+urxvt.background: #000000
 urxvt.foreground: #ffffff
 
 !! black dark/light
-*.color0: black
-*.color1: red3
-*.color2: green3
-*.color3: yellow3
-*.color4: blue2
-*.color5: magenta3
-*.color6: cyan3
-*.color7: grey90
-*.color8: grey50
-*.color9: red
-*.color10: green
-*.color11: yellow
-*.color12: #5560C8
-*.color13: magenta
-*.color14: cyan
-*.color15: white
-#=====================
-# /urxvt settings
-#=====================
+*.color0: #000000
+*.color1: #cd0000
+*.color2: #00cd00
+*.color3: #cdcd00
+*.color4: #0066ff
+*.color5: #cd00cd
+*.color6: #00b8b8
+*.color7: #e5e5e5
+*.color8: #000000
+*.color9: #650000
+*.color10: #006500
+*.color11: #655e00
+*.color12: #000098
+*.color13: #650065
+*.color14: #004848
+*.color15: #656565
+!!=====================
+!! /urxvt settings
+!!=====================
