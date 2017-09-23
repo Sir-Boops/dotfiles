@@ -139,3 +139,7 @@ bindsym $mod+r mode "resize"
 
 # Finally start polybar
 exec bash ~/.config/polybar/start.sh
+
+# Start polkit
+exec /usr/lib/polkit-1/polkitd --no-debug
+exec /usr/libexec/polkit-gnome-authentication-agent-1 &
