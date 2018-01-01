@@ -1,7 +1,7 @@
 interval=5
-align=top
+markup=pango
 
 [time]
-label=
-command=date '+%D %T'
+markup=pango
 interval=1
+command=bash ~/.dotfiles/scripts/time.sh
