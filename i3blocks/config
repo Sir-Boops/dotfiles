@@ -1,3 +1,8 @@
+[cpu]
+markup=pango
+interval=1
+command=bash ~/.dotfiles/scripts/cpu.sh
+
 [ram]
 markup=pango
 interval=5
