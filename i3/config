@@ -19,12 +19,15 @@ font pango:monospace 8
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
-# Window border settings
-new_window normal
-hide_edge_borders both
+# Commands to run on i3 start
+exec --no-startup-id VBoxClient-all start # If running in virtualbox
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
 
-# Float border settings
+# Window/Float border settings
+new_window normal
 new_float normal
+hide_edge_borders both
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
