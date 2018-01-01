@@ -1,6 +1,3 @@
-interval=5
-markup=pango
-
 [time]
 markup=pango
 interval=1
