@@ -1,0 +1,7 @@
+interval=5
+align=top
+
+[time]
+label=
+command=date '+%D %T'
+interval=1
