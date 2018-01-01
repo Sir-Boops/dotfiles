@@ -1,3 +1,8 @@
+[ram]
+markup=pango
+interval=5
+command=bash ~/.dotfiles/scripts/ram.sh
+
 [swap]
 markup=pango
 interval=5
