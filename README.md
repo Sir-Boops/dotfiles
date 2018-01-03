@@ -2,6 +2,8 @@
 Just the repo i use to store my dotfiles for when i reinstall a diffrent Linux distribution daily!
 
 # Required packages
+* `konsole`
+* `i3`
 * `font-awesome`
 * `dejavu fonts`
 * `bash >= 4.0`
