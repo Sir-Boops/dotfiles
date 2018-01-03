@@ -1,3 +1,6 @@
+separator=false
+separator_block_width=7
+
 [cpu]
 markup=pango
 interval=1
