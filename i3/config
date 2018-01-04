@@ -149,7 +149,10 @@ bar {
 
 	colors {
 					# Border	#Background	#Text
-		focused_workspace	#dadada		#dadada		#080808
+		focused_workspace	#cccccc		#4d4d4d		#ffffff
+		inactive_workspace	#4d4d4d		#4d4d4d		#ffffff
+		urgent_workspace	#cccccc		#4d4d4d		#ffffff
+		background		#404040
 	}
 
 	status_command i3blocks -c ~/.config/i3blocks/config
