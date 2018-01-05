@@ -25,6 +25,11 @@ new_window normal
 new_float normal
 hide_edge_borders both
 
+# Set i3 colors
+		#Border	$bkgrd	#text	#intca	#child border
+client.focused	#cccccc	#4d4d4d	#ffffff	#2e9ef4	#cccccc
+client.unfocused #4d4d4d #4d4d4d #ffffff #2e9ef4 #cccccc
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
