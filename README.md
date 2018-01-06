@@ -21,3 +21,4 @@ Just the repo i use to store my dotfiles for when i reinstall a diffrent Linux d
 * The `.vimrc` file should be installed to the `~` dir
 * The `albert` folder should be installed to the `.config` dir
 * The `konsole` folder should be installed to the `.local/share` dir
+* The `.bashrc` file should be installed to the `~/` dir
