@@ -10,6 +10,12 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
+" VIM Settings
+set autoindent
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
+
 " Vundle Setup
 set nocompatible
 filetype off
