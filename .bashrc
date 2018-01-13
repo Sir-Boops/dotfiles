@@ -1,5 +1,7 @@
 [[ $- != *i* ]] && return
 
+export TERMINAL=konsole
+
 alias ls='ls --color=auto'
 alias vi=vim
 

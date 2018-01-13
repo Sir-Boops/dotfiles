@@ -11,6 +11,7 @@ Just the repo i use to store my dotfiles for when i reinstall a diffrent Linux d
 * `top`
 * `albert`
 * `pulseaudio`
+* `feh`
 
 # Install notes
 * If using the `.vimrc` config please check inside the config on how to setup vim
