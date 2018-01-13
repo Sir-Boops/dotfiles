@@ -5,7 +5,7 @@ ORANGE='#d8931c'
 RED='#c11515'
 
 if [ ${1} -lt 35 ] || [ ${1} -eq 35 ]; then
-	echo "<span font='FontAwesome'>${2} <span color='${GREEN}'>${1}%</span></span>"
+	echo "${2}" | sed -En "s|%use%|<span color='${GREEN}'>${1}</span>|p"
 fi
 
 if [ ${1} -lt 50 ] || [ ${1} -eq 50 ] && [ ${1} -gt 35 ]; then
