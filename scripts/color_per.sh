@@ -9,13 +9,13 @@ if [ ${1} -lt 35 ] || [ ${1} -eq 35 ]; then
 fi
 
 if [ ${1} -lt 50 ] || [ ${1} -eq 50 ] && [ ${1} -gt 35 ]; then
-	echo "<span font='FontAwesome'>${2} <span color='${YELLOW}'>${1}%</span></span>"
+	echo "${2}" | sed -En "s|%use%|<span color='${YELLOW}'>${1}</span>|p"
 fi
 
 if [ ${1} -lt 65 ] || [ ${1} -eq 65 ] && [ ${1} -gt 50 ]; then
-	echo "<span font='FontAwesome'>${2} <span color='${ORANGE}'>${1}%</span></span>"
+	echo "${2}" | sed -En "s|%use%|<span color='${ORANGE}'>${1}</span>|p"
 fi
 
 if [ ${1} -gt 65 ]; then
-	echo "<span font='FontAwesome'>${2} <span color='${RED}'>${1}%</span></span>"
+	echo "${2}" | sed -En "s|%use%|<span color='${RED}'>${1}</span>|p"
 fi
