@@ -23,12 +23,15 @@ exec --no-startup-id albert # Start albert
 
 # Setup screens
 exec --no-startup-id xrandr --output LVDS-1 --primary
-exec --no-startup-id xrandr --output HDMI-2 --mode 1280x1024 --right-of LVDS-1
-exec --no-startup-id xrandr --output DP-1 --mode 1280x1024 --left-of LVDS-1
+exec --no-startup-id xrandr --output DP-1 --auto --left-of LVDS-1
+exec --no-startup-id sleep 1 && xrandr --output HDMI-2 --auto --right-of LVDS-1
+
+# Set the background
+exec --no-startup-id sleep 2 && feh --bg-fill ~/.bg.png
 
 # Window/Float border settings
-new_window normal
-new_float normal
+new_window none
+new_float none
 hide_edge_borders both
 
 # Set i3 colors
@@ -38,6 +41,9 @@ client.unfocused #4d4d4d #4d4d4d #ffffff #2e9ef4 #cccccc
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
+# Take a screenshot
+bindsym --release $mod+Shift+s exec --no-startup-id /home/boops/scripts/screenie.sh
 
 # start a terminal
 bindsym $mod+Return exec konsole
@@ -50,24 +56,6 @@ bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
-# move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -91,9 +79,6 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
