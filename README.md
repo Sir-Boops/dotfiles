@@ -13,6 +13,8 @@ Just the repo i use to store my dotfiles for when i reinstall a diffrent Linux d
 * `pulseaudio`
 * `feh`
 * `dunst`
+* `adwata`
+* `adwata-qt`
 
 # Install notes
 * If using the `.vimrc` config please check inside the config on how to setup vim
@@ -25,4 +27,4 @@ Just the repo i use to store my dotfiles for when i reinstall a diffrent Linux d
 * The `albert` folder should be installed to the `.config` dir
 * The `konsole` folder should be installed to the `.local/share` dir
 * The `.bashrc` file should be installed to the `~/` dir
-* The `xfce4` folder should be installed to the `~/.config` dir
+* The `gtk-3.0` folder should be installed to the `~/.config` dir
