@@ -12,7 +12,7 @@ Just the repo i use to store my dotfiles for when i reinstall a diffrent Linux d
 * `albert`
 * `pulseaudio`
 * `feh`
-* `xfce4-notifyd`
+* `dunst`
 
 # Install notes
 * If using the `.vimrc` config please check inside the config on how to setup vim

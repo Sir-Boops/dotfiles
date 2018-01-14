@@ -20,7 +20,7 @@ exec --no-startup-id xset s off # Stop X from sleeping
 #exec --no-startup-id xset -dpms # Disable engerystar
 exec --no-startup-id xset dpms 0 0 120
 exec --no-startup-id albert # Start albert
-exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd # For notfications
+exec --no-startup-id dunst -conf ~/.dotfiles/dunstrc # Start dunst for notifactions
 #exec --no-startup-id pulseaudio # Start pulseaudio
 
 # Setup screens
