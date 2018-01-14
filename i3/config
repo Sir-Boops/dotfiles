@@ -17,7 +17,8 @@ font pango:DejaVu Sans Mono 8
 # Commands to run on i3 start
 #exec --no-startup-id VBoxClient-all start # If running in virtualbox
 exec --no-startup-id xset s off # Stop X from sleeping
-exec --no-startup-id xset -dpms # Disable engerystar
+#exec --no-startup-id xset -dpms # Disable engerystar
+exec --no-startup-id xset dpms 0 0 120
 exec --no-startup-id albert # Start albert
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd # For notfications
 #exec --no-startup-id pulseaudio # Start pulseaudio
