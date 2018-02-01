@@ -29,5 +29,6 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'rust-lang/rust.vim'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'PotatoesMaster/i3-vim-syntax'
+Bundle 'gabrielelana/vim-markdown'
 call vundle#end()
 filetype plugin indent on
