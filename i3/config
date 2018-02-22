@@ -12,7 +12,7 @@
 set $mod Mod1
 
 # Font settings
-font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 7
 
 # Commands to run on i3 start
 #exec --no-startup-id VBoxClient-all start # If running in virtualbox
@@ -24,9 +24,14 @@ exec --no-startup-id /usr/libexec/mate-notification-daemon # Startup mate notfic
 #exec --no-startup-id pulseaudio # Start pulseaudio
 
 # Setup screens
-exec --no-startup-id xrandr --output LVDS-1 --primary
-exec --no-startup-id xrandr --output DP-1 --auto --left-of LVDS-1
-exec --no-startup-id sleep 1 && xrandr --output HDMI-2 --auto --right-of LVDS-1
+exec --no-startup-id xrandr --output LVDS-0 --primary
+exec --no-startup-id xrandr --output DP-1 --auto --left-of LVDS-0
+exec --no-startup-id sleep 1 && xrandr --output HDMI-0 --auto --right-of LVDS-0
+exec --no-startup-id sleep 2 && xrandr --dpi 96
+
+#output DP-1 pos 0 0 1280x1024
+#output LVDS-1 1280 0 1920x1080
+#output HDMI-A-2 3200 0 1280x1024
 
 # Set the background
 exec --no-startup-id sleep 2 && feh --bg-fill ~/.bg.png
@@ -41,6 +46,10 @@ hide_edge_borders both
 client.focused	#cccccc	#4d4d4d	#ffffff	#2e9ef4	#cccccc
 client.unfocused #4d4d4d #4d4d4d #ffffff #2e9ef4 #cccccc
 
+# Window Spefic settings
+for_window [class="keepassxc"] floating enable
+for_window [class="obs"] floating enable
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -48,7 +57,7 @@ floating_modifier $mod
 bindsym --release $mod+Shift+s exec --no-startup-id /home/boops/scripts/screenie.sh
 
 # start a terminal
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -111,7 +120,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -145,7 +155,7 @@ bar {
 #	output LVDS-1
 	tray_output none
 	position top
-	font pango:DejaVu Sans Mono 8
+	font pango:DejaVu Sans Mono 7
 
 	colors {
 					# Border	#Background	#Text

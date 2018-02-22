@@ -1,11 +1,12 @@
 [[ $- != *i* ]] && return
 
-export TERMINAL=konsole
+export TERMINAL=urxvt
 export GPG_TTY=$(tty)
 export QT_STYLE_OVERRIDE=adwaita
 
 alias ls='ls --color=auto'
-alias vi=vim
+alias vi="TERM=xterm-256color vim"
+alias ssh="TERM=xterm-256color ssh"
 
 HISTCONTROL='ignoredups'
 
