@@ -17,10 +17,10 @@ font pango:DejaVu Sans Mono 7
 # Commands to run on i3 start
 #exec --no-startup-id VBoxClient-all start # If running in virtualbox
 exec --no-startup-id xset s off # Stop X from sleeping
-#exec --no-startup-id xset -dpms # Disable engerystar
-exec --no-startup-id xset dpms 0 0 120
+exec --no-startup-id xset -dpms # Disable engery star
+#exec --no-startup-id xset dpms 0 0 120
 exec --no-startup-id albert # Start albert
-exec --no-startup-id /usr/libexec/mate-notification-daemon # Startup mate notfications
+#exec --no-startup-id /usr/libexec/mate-notification-daemon # Startup mate notfications
 #exec --no-startup-id pulseaudio # Start pulseaudio
 
 # Setup screens
@@ -42,7 +42,7 @@ new_float none
 hide_edge_borders both
 
 # Set i3 colors
-		#Border	$bkgrd	#text	#intca	#child border
+#Border	$bkgrd	#text	#intca	#child border
 client.focused	#cccccc	#4d4d4d	#ffffff	#2e9ef4	#cccccc
 client.unfocused #4d4d4d #4d4d4d #ffffff #2e9ef4 #cccccc
 
@@ -158,11 +158,11 @@ bar {
 	font pango:DejaVu Sans Mono 7
 
 	colors {
-					# Border	#Background	#Text
-		focused_workspace	#cccccc		#4d4d4d		#ffffff
-		inactive_workspace	#4d4d4d		#4d4d4d		#ffffff
-		urgent_workspace	#cccccc		#4d4d4d		#ffffff
-		background		#404040
+		# Border	#Background	#Text
+		focused_workspace  #cccccc		#4d4d4d		#ffffff
+		inactive_workspace #4d4d4d		#4d4d4d		#ffffff
+		urgent_workspace	 #cccccc		#4d4d4d		#ffffff
+		background         #404040
 	}
 
 	status_command i3blocks -c ~/.config/i3blocks/config
