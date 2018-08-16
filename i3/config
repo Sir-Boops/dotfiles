@@ -21,13 +21,16 @@ exec --no-startup-id xset -dpms # Disable engery star
 #exec --no-startup-id xset dpms 0 0 120
 exec --no-startup-id albert # Start albert
 #exec --no-startup-id /usr/libexec/mate-notification-daemon # Startup mate notfications
-#exec --no-startup-id pulseaudio # Start pulseaudio
+exec --no-startup-id pulseaudio # Start pulseaudio
 
 # Setup screens
-exec --no-startup-id xrandr --output LVDS-0 --primary
-exec --no-startup-id xrandr --output DP-1 --auto --left-of LVDS-0
-exec --no-startup-id sleep 1 && xrandr --output HDMI-0 --auto --right-of LVDS-0
+exec --no-startup-id xrandr --output LVDS-1 --primary
+exec --no-startup-id xrandr --output DP-1 --auto --left-of LVDS-1
+exec --no-startup-id sleep 1 && xrandr --output HDMI-2 --auto --right-of LVDS-1
 exec --no-startup-id sleep 2 && xrandr --dpi 96
+
+# Load Xrecourses
+exec --no-startup-id xrdb ~/.Xresources
 
 #output DP-1 pos 0 0 1280x1024
 #output LVDS-1 1280 0 1920x1080
@@ -57,7 +60,7 @@ floating_modifier $mod
 bindsym --release $mod+Shift+s exec --no-startup-id /home/boops/scripts/screenie.sh
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill

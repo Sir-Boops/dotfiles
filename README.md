@@ -18,6 +18,7 @@ Just the repo I use to store my dotfiles for when I reinstall a different Linux 
 * `adwata`
 * `adwata-qt`
 * `realpath`
+* `xdg-utils`
 
 # Packages to install for various distros
 * Voidlinux -> `xbps-install -Sy i3 i3block font-awesome5 bc feh albert pulseaudio`
@@ -29,6 +30,5 @@ Just the repo I use to store my dotfiles for when I reinstall a different Linux 
 * The `i3` folder should be installed into the `~/.config` dir
 * The `i3blocks` folder should be installed into the `~/.config` dir
 * The `.vimrc` file should be installed to the `~/` dir
-* The `albert` folder should be installed to the `~/.config` dir
 * The `.bashrc` file should be installed to the `~/` dir
 * The `gtk-3.0` folder should be installed to the `~/.config` dir

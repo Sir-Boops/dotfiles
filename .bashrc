@@ -1,6 +1,6 @@
 [[ $- != *i* ]] && return
 
-export TERMINAL=urxvt
+export TERMINAL=xterm
 export GPG_TTY=$(tty)
 export QT_STYLE_OVERRIDE=adwaita
 
