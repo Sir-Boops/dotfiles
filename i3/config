@@ -24,9 +24,9 @@ exec --no-startup-id albert # Start albert
 exec --no-startup-id pulseaudio # Start pulseaudio
 
 # Setup screens
-exec --no-startup-id xrandr --output LVDS-1 --primary
-exec --no-startup-id xrandr --output DP-1 --auto --left-of LVDS-1
-exec --no-startup-id sleep 1 && xrandr --output HDMI-2 --auto --right-of LVDS-1
+exec --no-startup-id xrandr --output LVDS-0 --primary
+exec --no-startup-id xrandr --output DP-1 --auto --left-of LVDS-0
+exec --no-startup-id sleep 1 && xrandr --output HDMI-0 --auto --right-of LVDS-0
 exec --no-startup-id sleep 2 && xrandr --dpi 96
 
 # Load Xrecourses
@@ -57,7 +57,7 @@ for_window [class="obs"] floating enable
 floating_modifier $mod
 
 # Take a screenshot
-bindsym --release $mod+Shift+s exec --no-startup-id /home/boops/scripts/screenie.sh
+bindsym --release $mod+Shift+s exec --no-startup-id gnome-screenshot --remove-border --area
 
 # start a terminal
 bindsym $mod+Return exec xterm

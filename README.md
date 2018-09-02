@@ -19,6 +19,7 @@ Just the repo I use to store my dotfiles for when I reinstall a different Linux 
 * `adwata-qt`
 * `realpath`
 * `xdg-utils`
+* `eye of gnome`
 
 # Packages to install for various distros
 * Voidlinux -> `xbps-install -Sy i3 i3block font-awesome5 bc feh albert pulseaudio`
