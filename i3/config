@@ -15,26 +15,19 @@ set $mod Mod1
 font pango:DejaVu Sans Mono 7
 
 # Commands to run on i3 start
-#exec --no-startup-id VBoxClient-all start # If running in virtualbox
 exec --no-startup-id xset s off # Stop X from sleeping
 exec --no-startup-id xset -dpms # Disable engery star
-#exec --no-startup-id xset dpms 0 0 120
 exec --no-startup-id albert # Start albert
-#exec --no-startup-id /usr/libexec/mate-notification-daemon # Startup mate notfications
 exec --no-startup-id pulseaudio # Start pulseaudio
 
 # Setup screens
-exec --no-startup-id xrandr --output LVDS-0 --primary
-exec --no-startup-id xrandr --output DP-1 --auto --left-of LVDS-0
-exec --no-startup-id sleep 1 && xrandr --output HDMI-0 --auto --right-of LVDS-0
+exec --no-startup-id xrandr --output LVDS-1 --primary
+exec --no-startup-id xrandr --output DP-1 --auto --left-of LVDS-1
+exec --no-startup-id sleep 1 && xrandr --output HDMI-2 --auto --right-of LVDS-1
 exec --no-startup-id sleep 2 && xrandr --dpi 96
 
 # Load Xrecourses
 exec --no-startup-id xrdb ~/.Xresources
-
-#output DP-1 pos 0 0 1280x1024
-#output LVDS-1 1280 0 1920x1080
-#output HDMI-A-2 3200 0 1280x1024
 
 # Set the background
 exec --no-startup-id sleep 2 && feh --bg-fill ~/.bg.png
@@ -57,7 +50,7 @@ for_window [class="obs"] floating enable
 floating_modifier $mod
 
 # Take a screenshot
-bindsym --release $mod+Shift+s exec --no-startup-id gnome-screenshot --remove-border --area
+bindsym --release $mod+Shift+s exec --no-startup-id gnome-screenshot --area --remove-border --file=/home/boops/Downloads/gay.png
 
 # start a terminal
 bindsym $mod+Return exec xterm
