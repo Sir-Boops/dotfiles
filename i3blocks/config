@@ -1,20 +1,5 @@
 separator=false
-separator_block_width=7
-
-[cpu]
-markup=pango
-interval=1
-command=bash ~/.dotfiles/scripts/cpu.sh
-
-[ram]
-markup=pango
-interval=5
-command=bash ~/.dotfiles/scripts/ram.sh
-
-[swap]
-markup=pango
-interval=5
-command=bash ~/.dotfiles/scripts/swap.sh
+separator_block_width=8
 
 [time]
 markup=pango

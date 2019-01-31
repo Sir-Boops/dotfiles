@@ -7,8 +7,8 @@
 " Theme Settings
 syntax enable
 set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+"let g:solarized_termcolors=256
+"colorscheme solarized
 
 " VIM Settings
 set autoindent
@@ -29,6 +29,7 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'rust-lang/rust.vim'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'PotatoesMaster/i3-vim-syntax'
+Plugin 'fatih/vim-go'
 Bundle 'gabrielelana/vim-markdown'
 call vundle#end()
 filetype plugin indent on

@@ -30,7 +30,7 @@ exec --no-startup-id sleep 2 && xrandr --dpi 96
 exec --no-startup-id xrdb ~/.Xresources
 
 # Set the background
-exec --no-startup-id sleep 2 && feh --bg-fill ~/.bg.png
+exec --no-startup-id sleep 2 && feh --bg-fill ~/.bg.jpg
 
 # Window/Float border settings
 new_window none
