@@ -51,9 +51,15 @@ bindsym --release $mod+Shift+k exec keepassxc
 bindsym --release $mod+Shift+f exec --no-startup-id /home/boops/.firefox/firefox
 
 # Window spefic settings
-for_window [class="keepassxc"] floating enable
-for_window [class="obs"] floating enable
-for_window [class="steam"] floating enable
+# To get window class use xprop
+# To get window id use xwininfo
+for_window [class="^keepassxc$"] floating enable
+for_window [class="^obs"] floating enable
+for_window [class="^Pavucontrol$"] floating enable
+
+# Steam Window settings
+for_window [class="^Steam$"] floating enable
+for_window [class="^Friends List$"] floating enable
 
 # Window/Float border settings
 new_window none
@@ -125,7 +131,7 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym --release $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+e exit
