@@ -49,6 +49,7 @@ bindsym --release $mod+Return exec xterm
 bindsym --release $mod+Shift+s exec --no-startup-id gnome-screenshot --area --remove-border --file=/home/boops/Downloads/gay.png
 bindsym --release $mod+Shift+k exec keepassxc
 bindsym --release $mod+Shift+f exec --no-startup-id /home/boops/.firefox/firefox
+bindsym --release $mod+Shift+v exec pavucontrol
 
 # Window spefic settings
 # To get window class use xprop
