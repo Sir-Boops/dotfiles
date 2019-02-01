@@ -18,7 +18,7 @@ font pango:DejaVu Sans Mono 7
 exec --no-startup-id xset s off # Stop X from sleeping
 exec --no-startup-id xset -dpms # Disable engery star
 exec --no-startup-id albert # Start albert
-exec --no-startup-id pulseaudio # Start pulseaudio
+exec --no-startup-id pulseaudio -D # Start pulseaudio
 
 # To Sync copy pasta
 exec --no-startup-id autocutsel -selection CLIPBOARD -fork
@@ -54,9 +54,11 @@ bindsym --release $mod+Shift+v exec pavucontrol
 # Window spefic settings
 # To get window class use xprop
 # To get window id use xwininfo
+# Caps are important!
 for_window [class="^keepassxc$"] floating enable
 for_window [class="^obs"] floating enable
 for_window [class="^Pavucontrol$"] floating enable
+for_window [class="^Virt-manager$"] floating enable
 
 # Steam Window settings
 for_window [class="^Steam$"] floating enable
