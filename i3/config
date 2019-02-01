@@ -20,17 +20,40 @@ exec --no-startup-id xset -dpms # Disable engery star
 exec --no-startup-id albert # Start albert
 exec --no-startup-id pulseaudio # Start pulseaudio
 
+# To Sync copy pasta
+exec --no-startup-id autocutsel -selection CLIPBOARD -fork
+exec --no-startup-id autocutsel -selection PRIMARY -fork
+
 # Setup screens
-exec --no-startup-id xrandr --output LVDS-1 --primary
-exec --no-startup-id xrandr --output DP-1 --auto --left-of LVDS-1
-exec --no-startup-id sleep 1 && xrandr --output HDMI-2 --auto --right-of LVDS-1
+exec --no-startup-id xrandr --output LVDS-0 --primary
+exec --no-startup-id xrandr --output DP-1 --auto --left-of LVDS-0
+exec --no-startup-id sleep 1 && xrandr --output HDMI-0 --auto --right-of LVDS-0
 exec --no-startup-id sleep 2 && xrandr --dpi 96
 
-# Load Xrecourses
+# Load Xresources
 exec --no-startup-id xrdb ~/.Xresources
 
 # Set the background
 exec --no-startup-id sleep 2 && feh --bg-fill ~/.bg.jpg
+
+# Set terminal opening keybind
+bindsym --release $mod+Return exec xterm
+
+# Set custom keybinds
+# Notes
+# E Is used to exit
+# Q Is used to quit
+# R Is used to reload
+# `space` Is used to float a window
+# [0-9] Are used to switch window location
+bindsym --release $mod+Shift+s exec --no-startup-id gnome-screenshot --area --remove-border --file=/home/boops/Downloads/gay.png
+bindsym --release $mod+Shift+k exec keepassxc
+bindsym --release $mod+Shift+f exec --no-startup-id /home/boops/.firefox/firefox
+
+# Window spefic settings
+for_window [class="keepassxc"] floating enable
+for_window [class="obs"] floating enable
+for_window [class="steam"] floating enable
 
 # Window/Float border settings
 new_window none
@@ -42,18 +65,8 @@ hide_edge_borders both
 client.focused	#cccccc	#4d4d4d	#ffffff	#2e9ef4	#cccccc
 client.unfocused #4d4d4d #4d4d4d #ffffff #2e9ef4 #cccccc
 
-# Window Spefic settings
-for_window [class="keepassxc"] floating enable
-for_window [class="obs"] floating enable
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
-
-# Take a screenshot
-bindsym --release $mod+Shift+s exec --no-startup-id gnome-screenshot --area --remove-border --file=/home/boops/Downloads/gay.png
-
-# start a terminal
-bindsym $mod+Return exec xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -111,8 +124,6 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
