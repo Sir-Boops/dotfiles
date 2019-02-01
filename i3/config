@@ -59,6 +59,8 @@ for_window [class="^keepassxc$"] floating enable
 for_window [class="^obs"] floating enable
 for_window [class="^Pavucontrol$"] floating enable
 for_window [class="^Virt-manager$"] floating enable
+for_window [title="^About Mozilla Firefox$"] floating enable
+for_window [title="^Developer Tools"] floating enable
 
 # Steam Window settings
 for_window [class="^Steam$"] floating enable
