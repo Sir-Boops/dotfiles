@@ -55,12 +55,14 @@ bindsym --release $mod+Shift+v exec pavucontrol
 # To get window class use xprop
 # To get window id use xwininfo
 # Caps are important!
+# For more help see: https://i3wm.org/docs/userguide.html#command_criteria
 for_window [class="^keepassxc$"] floating enable
 for_window [class="^obs"] floating enable
 for_window [class="^Pavucontrol$"] floating enable
 for_window [class="^Virt-manager$"] floating enable
-for_window [title="^About Mozilla Firefox$"] floating enable
-for_window [title="^Developer Tools"] floating enable
+for_window [title="^About Mozilla Firefox$" class="^Firefox$"] floating enable
+for_window [instance="^Devtools$" class="^Firefox$"] floating enable
+for_window [instance="^Msgcompose$" class="^Thunderbird$"] floating enable
 
 # Steam Window settings
 for_window [class="^Steam$"] floating enable
